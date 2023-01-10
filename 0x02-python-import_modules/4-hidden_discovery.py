@@ -1,4 +1,3 @@
-# !/usr/bin/python3
 # 4-hidden_discovery.py
 # Julius Okeyo <jaykopiyo@gmail.com>
 
