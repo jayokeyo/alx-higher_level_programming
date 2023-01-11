@@ -3,8 +3,5 @@
 # Jullius Okeyo <jaykopiyo@gmail.com>
 
 def square_matrix_simple(matrix=[]):
-    matrix_copy = []
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            matrix_copy[i][j] = matrix[i][j] * matrix[i][j]
-    return (matrix_copy)
+    """Compute the square value of all integers of a matrix."""
+    return ([list(map(lambda x: x * x, row)) for row in matrix])
