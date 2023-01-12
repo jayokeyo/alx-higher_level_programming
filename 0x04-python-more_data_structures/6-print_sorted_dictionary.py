@@ -3,4 +3,4 @@
 # Julius Okeyo <jaykopiyo@gmail.com>
 
 def print_sorted_dictionary(a_dictionary):
-    return (sorted(a_dictionary))
+    return (sorted(a_dictionary.items()))
