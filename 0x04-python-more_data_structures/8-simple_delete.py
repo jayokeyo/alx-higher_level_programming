@@ -3,5 +3,5 @@
 # Julius Okeyo <jaykopiyo@gmail.com>
 
 def simple_delete(a_dictionary, key=""):
-    del(a_dictionary[key]) if key in a_dictionary
+    del(a_dictionary[key]) if key is in a_dictionary
     return (a_dictionary)
