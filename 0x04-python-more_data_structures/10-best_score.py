@@ -3,4 +3,8 @@
 # Julius Okeyo <jaykopiyo@gmail.com>
 
 def best_score(a_dictionary):
-    return (max(set(a_dictionary.values())))
+    highest = 0
+    for key in a_dictionary.keys():
+        if a_dictionary[key] > highest:
+            highest = a_dictionary[key]
+    return (highest)
