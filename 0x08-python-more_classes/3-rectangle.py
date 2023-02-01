@@ -29,12 +29,12 @@ class Rectangle:
         string = ""
 
         if self.height == 0 or self.width == 0:
-            return result
+            return string
         for i in range(self.height):
-            result += "{:s}".format(self.width * "#")
+            string += (self.width * "#")
             if i + 1 is not self.height:
-                result += "\n"
-        return result
+                string += "\n"
+        return string
     @property
     def width(self):
         '''
