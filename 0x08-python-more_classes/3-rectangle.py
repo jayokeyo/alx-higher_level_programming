@@ -32,6 +32,7 @@ class Rectangle:
             return result
         for i in range(self.height):
             result += "{:s}".format(self.width * "#")
+        return result
     @property
     def width(self):
         '''
