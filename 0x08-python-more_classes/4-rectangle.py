@@ -41,7 +41,7 @@ class Rectangle:
         Overwrites the builtin __repr__ method
         """
 
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
     @property
     def width(self):
         '''
