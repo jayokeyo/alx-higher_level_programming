@@ -36,7 +36,7 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return string
         for i in range(self.height):
-            string += (self.width * "#")
+            string += (self.width * str(self.print_symbol))
             if i + 1 is not self.height:
                 string += "\n"
         return string
