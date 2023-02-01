@@ -31,7 +31,9 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return result
         for i in range(self.height):
-            result += "{:s}{:s}".format(self.width * "#", "\n")
+            result += "{:s}".format(self.width * "#")
+            if i + 1 is not self.height:
+                result += "\n"
         return result
     @property
     def width(self):
