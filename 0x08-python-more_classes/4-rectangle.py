@@ -35,13 +35,12 @@ class Rectangle:
             if i + 1 is not self.height:
                 string += "\n"
         return string
-
-     def __repr__(self):
+    def __repr__(self):
         """
         Overwrites the builtin __repr__ method
         """
 
-        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+        return ("Rectangle(" + str(self.width) + ", " + str(self.height) + ")")
     @property
     def width(self):
         '''
