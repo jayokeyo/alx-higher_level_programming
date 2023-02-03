@@ -1,0 +1,40 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("   Hi there.")
+Hi there.
+<BLANKLINE>
+>>> text_indentation("          ")
+>>> text_indentation("Hello.   ")
+Hello.
+<BLANKLINE>
+>>> text_indentation("Do you need it now? This is messy.")
+Do you need it now?
+<BLANKLINE>
+This is messy.
+<BLANKLINE>
+>>> text_indentation("Gorginho to Arsenal, Here we go! 18 months contract signed between club and player.\nPrinted.")
+Gorginho to Arsenal,
+<BLANKLINE>
+Here we go! 18 months contract signed between club and player.
+<BLANKLINE>
+<BLANKLINE>
+Printed.
+<BLANKLINE>
+>>> text_indentation("\n\n\n print three new lines.")
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+print three new lines.
+<BLANKLINE>
+>>> text_indentation("I may be a fool \n but I'm smarter than you.")
+A sneaky 
+new line.
+<BLANKLINE>
+>>> text_indentation(7)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation({"one": 1, "two": 2})
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
