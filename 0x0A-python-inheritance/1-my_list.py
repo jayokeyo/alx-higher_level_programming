@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 # 1-my_list.py
 # Julius Okeyo <jaykopiyo@gmail.com>
 '''
