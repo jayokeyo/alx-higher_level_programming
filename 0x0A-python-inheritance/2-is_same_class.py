@@ -7,8 +7,9 @@ an object belongs to a particular class
 '''
 def is_same_class(obj, a_class):
     '''
-    Checks if obj belongs to a_class
+    Checks if obj belongs to a_class.
+    Args:
+        obj: object to be tested.
+        a_class: class it should belong to.
     '''
-    if not isinstance(type(obj), a_class):
-        return False
-    return True
+    return type(obj) is a_class
