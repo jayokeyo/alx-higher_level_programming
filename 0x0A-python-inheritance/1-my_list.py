@@ -9,4 +9,5 @@ class MyList(list):
     Defines a function for printinga sorted list
     '''
     def print_sorted(self):
+        """Print a list in sorted ascending order."""
         print(sorted(self))
