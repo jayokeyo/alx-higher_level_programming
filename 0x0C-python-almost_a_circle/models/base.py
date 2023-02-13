@@ -2,6 +2,9 @@
 '''
 Defines class base
 '''
+import json
+import csv
+import turtle
 class Base:
     '''
     Class Base with private class attribute __nb_objects, and
@@ -21,9 +24,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-         """
-         Return the JSON serialization of a list of dicts.
-         Args:
+        """
+        Return the JSON serialization of a list of dicts.
+        Args:
             list_dictionaries (list): A list of dictionaries.
         """
         if list_dictionaries is None or list_dictionaries == []:
@@ -111,8 +114,8 @@ class Base:
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
-     @classmethod
-     def load_from_file_csv(cls):
+    @classmethod
+    def load_from_file_csv(cls):
         """
         Return a list of classes instantiated from a CSV file.
         Reads from `<cls.__name__>.csv`.
@@ -133,8 +136,8 @@ class Base:
         except IOError:
             return []
 
-     @staticmethod
-     def draw(list_rectangles, list_squares):
+    @staticmethod
+    def draw(list_rectangles, list_squares):
         """
         Draw Rectangles and Squares using the turtle module
         Args:

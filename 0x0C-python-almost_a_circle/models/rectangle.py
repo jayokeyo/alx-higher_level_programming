@@ -2,6 +2,7 @@
 '''
 Defines class Rectangle that inherits class Base
 '''
+from base import Base
 class Rectangle(Base):
     '''
     Class Rectangle with private instance attributes
@@ -120,9 +121,9 @@ class Rectangle(Base):
         Displays a rectangle using # characters
         '''
         [print("") for y in range(self.y)] #Adjusts the position of rectangle on y axis
-        for (i in range(self.height)):
+        for i in range(self.height):
             [print(" ", end="") for x in range(self.x)] #Adjusts the position of the rectangle on the x axis
-            for (j in range(self.width)):
+            for j in range(self.width):
                 print("{}".format("#"))
             if (i != self.height - 1):
                 print("\n")
@@ -172,8 +173,8 @@ class Rectangle(Base):
                 elif k == "y":
                     self.y = v
 
-     def to_dictionary(self):
-         """
-         Return the dictionary representation of the rectangle.
-         """
-         return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
+    def to_dictionary(self):
+        """
+        Return the dictionary representation of the rectangle.
+        """
+        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}

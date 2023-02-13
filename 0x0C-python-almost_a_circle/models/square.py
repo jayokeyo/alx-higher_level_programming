@@ -2,6 +2,7 @@
 '''
 Defines class Square
 '''
+from rectangle import Rectangle
 class Square(Rectangle):
     '''
     class Square with Class constructor: def __init__(self, size, x=0, y=0, id=None):
@@ -39,7 +40,7 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-     def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """
         Update the Square.
         Args:
@@ -79,8 +80,8 @@ class Square(Rectangle):
                 elif k == "y":
                     self.y = v
 
-     def to_dictionary(self):
-         """
-         Return the dictionary representation of the Square.
-         """
-         return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+    def to_dictionary(self):
+        """
+        Return the dictionary representation of the Square.
+        """
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
