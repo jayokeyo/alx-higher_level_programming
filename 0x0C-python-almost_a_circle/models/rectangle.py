@@ -100,3 +100,9 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    def area(self):
+        '''
+        Calculates the areas of a rectangle
+        '''
+        return (self.width * self.height)
