@@ -2,7 +2,8 @@
 '''
 Defines class Square
 '''
-from rectangle import Rectangle
+from models.rectangle import Rectangle
+
 class Square(Rectangle):
     '''
     class Square with Class constructor: def __init__(self, size, x=0, y=0, id=None):
@@ -17,7 +18,7 @@ class Square(Rectangle):
             y - displacement of square along y axis
             id - id of object
         '''
-        super.__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         '''

@@ -2,7 +2,7 @@
 '''
 Defines class Rectangle that inherits class Base
 '''
-from base import Base
+from models.base import Base
 class Rectangle(Base):
     '''
     Class Rectangle with private instance attributes
@@ -29,11 +29,11 @@ class Rectangle(Base):
             x - x displacement on x axis
             y - y displacement on y axis
         '''
-        super.__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
@@ -46,15 +46,15 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         '''
         Sets width
         '''
-        if (width is not int):
+        if (type(value) != int):
             raise TypeError("width must be an integer")
-        if (width <= 0):
+        if (value <= 0):
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -64,15 +64,15 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         '''
         Sets height
         '''
-        if (height is not int):
+        if (type(value) != int):
             raise TypeError("height must be an integer")
-        if (height <= 0):
+        if (value <= 0):
             raise ValueError("height must be > 0")
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -82,15 +82,15 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x):
+    def x(self, value):
         '''
         Sets x
         '''
-        if (x is not int):
+        if (type(value) != int):
             raise TypeError("x must be an integer")
-        if (x < 0):
+        if (value < 0):
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -100,15 +100,15 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y):
+    def y(self, value):
         '''
         Sets y
         '''
-        if (y is not int):
+        if (type(value) != int):
             raise TypeError("y must be an integer")
-        if (y < 0):
+        if (value < 0):
             raise ValueError("y must be >= 0")
-        self.__y = y
+        self.__y = value
 
     def area(self):
         '''
@@ -177,4 +177,8 @@ class Rectangle(Base):
         """
         Return the dictionary representation of the rectangle.
         """
-        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
+        res = {}
+        for key, val in self.__dict__.items():
+            key = key.replace("_Rectangle__", "")
+            res[key] = val
+        return res
