@@ -12,6 +12,6 @@ if __name__ == "__main__":
             db = sys.argv[3]
             )
     cursor = db.cursor()
-    query = "SELECT * FROM `states` WHERE name LIKE 'N%' ORDER BY 'id'"
+    query = "SELECT * FROM `states` WHERE state[1][0] == "N" ORDER BY 'id'"
     cursor.execute(query)
     [print(state) for state in cursor.fetchall()]
