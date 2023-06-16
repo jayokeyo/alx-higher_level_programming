@@ -12,6 +12,5 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
     cursor = db.cursor()
-    query = "SELECT states FROM hbtn_0e_0_usa ORDER BY states ASC"
-    cursor.execute(query)
+    cursor.execute("SELECT * FROM states")
     [print(state) for state in cursor.fetchall()]
