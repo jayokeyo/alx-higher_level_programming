@@ -11,6 +11,6 @@ class State(Base):
     '''
     class definition of a State
     '''
-    __tablename__ = states
+    __tablename__ = "states"
     id = Column(Integer, autoincrement=True, PrimaryKey=True)
     name = Column(String(128), nullable=False)
