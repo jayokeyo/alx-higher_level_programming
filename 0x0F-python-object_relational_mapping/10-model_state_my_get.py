@@ -18,8 +18,8 @@ if __name__ == "__main__":
     state = session.query(State)
     Found = 0
     for st in state:
-        if (state.name == state_name):
-            print(st.id)
+        if (st.name == state_name):
+            print("{}".format(st.id))
             Found = 1
             break
     if (Found == 0):
