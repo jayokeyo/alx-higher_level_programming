@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/python3
 '''
 class definition of a State and an instance Base = declarative_base()
 '''
