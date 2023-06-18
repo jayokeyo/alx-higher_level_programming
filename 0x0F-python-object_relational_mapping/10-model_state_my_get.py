@@ -21,5 +21,6 @@ if __name__ == "__main__":
         if (state.name == state_name):
             print(st.id)
             Found = 1
+            break
     if (Found == 0):
         print("Not found")
