@@ -16,4 +16,4 @@ if __name__ == "__main__":
 
     state_name = sys.argv[4]
     state = session.query(State)
-    [print(state.id) if state.name == state_name else "Not found"]
+    [for st in state [print(state.id) if state.name == state_name else "Not found"]]
